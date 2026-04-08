@@ -19,7 +19,7 @@ Apply on rows operator
 }
 \examples{
 # can be used like:
-iris[,c(1:4)] \%row\% function(x) mean(x, na.rm = T)
+iris[,c(1:4)] \%row\% function(x) mean(x, na.rm = TRUE)
 
 # or like this:
 iris[,c(1:4)] \%row\% sum
