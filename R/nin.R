@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' # Negates the %in% operator - returns c(FALSE, FALSE, FALSE)
-#' x <- c("a", "b" "c")
+#' x <- c("a", "b", "c")
 #' x %nin% y
 `%nin%` <- function(x,y) {
   !('%in%'(x,y))
