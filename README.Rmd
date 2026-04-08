@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# LSutils
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of LSutils is to extend some operators in base R.
+
+## Installation
+
+You can install the development version of LSutils from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("saltylubik/LSutils")
+```
+
+## Example
+
+Simple use case of this package.
+
+```{r example}
+library(LSutils)
+
+## basic example code
+
+# %nin% operator - negate %in%
+x <- c("a", "b", "c")
+x %nin% letters
+
+# %p% operator - paste0 which concatenates LHS and RHS with underscore, can be chained
+"a" %p% "b"
+"a" %p% "b" %p% "c"
+
+# %g% operator - grepl where LHS is pattern and RHS is character vector where matches are sought
+"a" %g% c("abc", "a")
+
+# %col% operator - apply function to columns of a matrix or data.frame
+iris[,1:4] %col% function(x) mean(x, na.rm = T)
+
+# %row% operator - apply function to rows of a matrix or data.frame
+iris[,1:4] %row% function(x) mean(x, na.rm = T)
+```
+
+

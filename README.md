@@ -1,0 +1,66 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# LSutils
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of LSutils is to extend some operators in base R.
+
+## Installation
+
+You can install the development version of LSutils from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("saltylubik/LSutils")
+```
+
+## Example
+
+Simple use case of this package.
+
+``` r
+library(LSutils)
+
+## basic example code
+
+# %nin% operator - negate %in%
+x <- c("a", "b", "c")
+x %nin% letters
+#> [1] FALSE FALSE FALSE
+
+# %p% operator - paste0 which concatenates LHS and RHS with underscore, can be chained
+"a" %p% "b"
+#> [1] "a_b"
+"a" %p% "b" %p% "c"
+#> [1] "a_b_c"
+
+# %g% operator - grepl where LHS is pattern and RHS is character vector where matches are sought
+"a" %g% c("abc", "a")
+#> [1] TRUE TRUE
+
+# %col% operator - apply function to columns of a matrix or data.frame
+iris[,1:4] %col% function(x) mean(x, na.rm = T)
+#> Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
+#>     5.843333     3.057333     3.758000     1.199333
+
+# %row% operator - apply function to rows of a matrix or data.frame
+iris[,1:4] %row% function(x) mean(x, na.rm = T)
+#>   [1] 2.550 2.375 2.350 2.350 2.550 2.850 2.425 2.525 2.225 2.400 2.700 2.500
+#>  [13] 2.325 2.125 2.800 3.000 2.750 2.575 2.875 2.675 2.675 2.675 2.350 2.650
+#>  [25] 2.575 2.450 2.600 2.600 2.550 2.425 2.425 2.675 2.725 2.825 2.425 2.400
+#>  [37] 2.625 2.500 2.225 2.550 2.525 2.100 2.275 2.675 2.800 2.375 2.675 2.350
+#>  [49] 2.675 2.475 4.075 3.900 4.100 3.275 3.850 3.575 3.975 2.900 3.850 3.300
+#>  [61] 2.875 3.650 3.300 3.775 3.350 3.900 3.650 3.400 3.600 3.275 3.925 3.550
+#>  [73] 3.800 3.700 3.725 3.850 3.950 4.100 3.725 3.200 3.200 3.150 3.400 3.850
+#>  [85] 3.600 3.875 4.000 3.575 3.500 3.325 3.425 3.775 3.400 2.900 3.450 3.525
+#>  [97] 3.525 3.675 2.925 3.475 4.525 3.875 4.525 4.150 4.375 4.825 3.400 4.575
+#> [109] 4.200 4.850 4.200 4.075 4.350 3.800 4.025 4.300 4.200 5.100 4.875 3.675
+#> [121] 4.525 3.825 4.800 3.925 4.450 4.550 3.900 3.950 4.225 4.400 4.550 5.025
+#> [133] 4.250 3.925 3.925 4.775 4.425 4.200 3.900 4.375 4.450 4.350 3.875 4.550
+#> [145] 4.550 4.300 3.925 4.175 4.325 3.950
+```
