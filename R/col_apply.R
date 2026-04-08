@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' # can be used like:
-#' iris[,c(1:4)] %col% function(x) mean(x, na.rm = T)
+#' iris[,c(1:4)] %col% function(x) mean(x, na.rm = TRUE)
 #'
 #' # or like this:
 #' iris[,c(1:4)] %col% sum
