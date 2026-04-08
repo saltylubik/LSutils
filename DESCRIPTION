@@ -1,13 +1,13 @@
 Package: LSutils
 Type: Package
-Title: Useful pipe-like operators to standard functions.
+Title: Useful pipe-like operators to standard functions
 Version: 0.1.0
 Authors@R:
     person(
       "Lubomir", "Seif",
       email = "seiflubomir@gmail.com",
       role = c("aut", "cre"),
-      comment = c(ORCID = "https://orcid.org/0009-0003-7444-9425"))
+      comment = c(ORCID = "https://orcid.org/0009-0003-7444-9425")
     )
 Description: Simple functions that make working with base R a more pleasant task.
 License: MIT + file LICENSE
