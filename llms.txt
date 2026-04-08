@@ -1,6 +1,10 @@
 # LSutils
 
-The goal of LSutils is to extend some operators in base R.
+The goal of LSutils is to extend some operators in base R. Right now it
+is a collection of a 5 operator functions. Further work is expected on
+this package.
+
+Feel free to suggest or implement your own utility functions.
 
 ## Installation
 
