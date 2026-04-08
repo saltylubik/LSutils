@@ -1,16 +1,16 @@
 Package: LSutils
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Useful pipe-like operators to standard functions.
 Version: 0.1.0
-Authors@R: c(
+Authors@R:
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
+      "Lubomir", "Seif",
+      email = "seiflubomir@gmail.com",
+      role = c("aut", "cre"),
+      comment = c(ORCID = "https://orcid.org/0009-0003-7444-9425"))
     )
-  )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Simple functions that make working with base R a more pleasant task.
+License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
