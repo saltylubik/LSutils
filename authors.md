@@ -3,7 +3,7 @@
 ## Authors
 
 - **Lubomir Seif**. Author, maintainer.
-  [](https://orcid.org/https://orcid.org/0009-0003-7444-9425)
+  [](https://orcid.org/0009-0003-7444-9425)
 
 ## Citation
 
