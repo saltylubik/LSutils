@@ -1,6 +1,5 @@
 url: https://saltylubik.github.io/LSutils/
 template:
   bootstrap: 5
-  light-switch: true
   bootswatch: darkly
 
